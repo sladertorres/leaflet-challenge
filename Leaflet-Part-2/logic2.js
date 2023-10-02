@@ -2,6 +2,8 @@
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 var tectonicplatesUrl = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
 
+
+
 // Perform a GET request to the query URL
 d3.json(queryUrl).then(function (data) {
   // Console log the data retrieved 
@@ -9,6 +11,9 @@ d3.json(queryUrl).then(function (data) {
   // Once we get a response, send the data.features object to the createFeatures function.
   createFeatures(data.features);
 });
+
+
+
 
 // Function to determine marker color by depth
 function chooseColor(depth){
